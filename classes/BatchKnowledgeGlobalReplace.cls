@@ -39,7 +39,7 @@ global class BatchKnowledgeGlobalReplace implements Database.Batchable<sObject>,
    
     global void execute(Database.BatchableContext BC, List<sObject> scope){
         // Record Ids are concatenated to allow all replacement tasks
-        // for this batch scope to be returned in a single SOQL query.       
+        // for this batch scope to be returned in a single SOQL query       
         String strScopeIds = '';
         for (sObject scopeObject : scope) {
             if (strScopeIds.length()>0) strScopeIds += ',';
